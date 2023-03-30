@@ -33,11 +33,20 @@ class Square:
         """
         return self._Square__size ** 2
 
-    def my_print(self):
-        """prints a square with # characters"""
-        for i in range(self._Square__size):
-            for j in range(self._Square__size):
-                print("#", end="")
-            print()
-        if self.__size == 0:
-            print("")
+    def __eq__(self, other):
+        return self.area() == other.area()
+
+    def __ne__(self, other):
+        return self.area() != other.area()
+
+    def __gt__(self, other):
+        return self.area() > other.area()
+
+    def __ge__(self, other):
+        return self.area() >= other.area()
+
+    def __lt__(self, other):
+        return self.area() < other.area()
+
+    def __le__(self, other):
+        return self.area() <= other.area()
