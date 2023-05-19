@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-import 
+"""a script that prints The ZEN OF Python"""
+import this 
