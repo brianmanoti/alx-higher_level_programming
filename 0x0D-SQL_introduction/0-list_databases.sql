@@ -1,2 +1,2 @@
-"""Displays My sql DATABASES"""
-mysql> show databases
+--Displays all the available Databases
+show databases;
