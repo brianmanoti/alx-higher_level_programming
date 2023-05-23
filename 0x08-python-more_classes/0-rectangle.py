@@ -3,6 +3,7 @@
     An empty module that defines a function
 """
 
+
 class Rectangle:
     """Defines class rectangle"""
     pass
