@@ -1,7 +1,8 @@
-#!/usr/bin/python 3
+#!/usr/bin/python3
 """
 function to write into a file
 """
+
 
 def write_file(filename="", text=""):
 	"""
