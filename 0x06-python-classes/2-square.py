@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-"""Daclares a square"""
+"""Declares a class called Square With Private Attributes"""
 
+class square:
+    """
+    A class called Square
 
-class Square:
-    """Represents a square"""
+    arg: size- a private attribute for defining its size
+    """
 
-    def __init__(self, size=0):
-        """Initialize a square
-            Args:
-                size: size of square
-        """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
+    def __init__(self, size, size=0):
+        """Initialises the size attribute"""
+        if type(size) is int:
+            if size < 0 :
+                raise ValueError("size must >= 0")
+            else:
+                self.__size = size
         else:
-            self.__size = size
-
+            raise TypeError("size must be an integer")
