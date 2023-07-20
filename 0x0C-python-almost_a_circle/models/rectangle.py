@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle class."""
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -7,7 +8,6 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize a new Rectangle.
-
         Args:
             width (int): The width of the new Rectangle.
             height (int): The height of the new Rectangle.
@@ -83,18 +83,19 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """
-            prints the rectangle instance with the # character
-        """
-        for i in range(self.__y):
-            print()
-        for i in range(self.__height):
-            print(" " * self.__x, end="")
-            print("#" * self.__width)
+        """Print the Rectangle using the `#` character."""
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
 
     def update(self, *args, **kwargs):
         """Update the Rectangle.
-
         Args:
             *args (ints): New attribute values.
                 - 1st argument represents id attribute

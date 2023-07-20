@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Defines a square class."""
+"""
+This module contains the "Square" class
+"""
 from models.rectangle import Rectangle
 
 
