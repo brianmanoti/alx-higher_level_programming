@@ -1,32 +1,21 @@
 #!/usr/bin/python3
-
+"""Defines a base model class."""
 class Base:
-    """
-    This is the Base class that represents a base object.
-
+    """Represent the base model.
+    Represents the "base" for all other classes in project 0x0C*.
     Attributes:
-        __nb_objects (int): A private class attribute to keep track of the number of instances created.
-        id (int): A public instance attribute representing the ID of the object.
-
-    Methods:
-        __init__(self, id=None): The constructor method to initialize a Base object.
+        __nb_objects (int): The number of instantiated Bases.
     """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """
-        Initialize a Base object.
-
+        """Initialize a new Base.
         Args:
-            id (int, optional): The ID for the object. If not provided, it will be auto-generated.
-
-        Returns:
-            None
+            id (int): The identity of the new Base.
         """
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
