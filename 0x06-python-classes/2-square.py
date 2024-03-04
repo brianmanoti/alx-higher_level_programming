@@ -8,7 +8,7 @@ class square:
     arg: size- a private attribute for defining its size
     """
 
-    def __init__(self, size, size=0):
+    def __init__(self, size=0):
         """Initialises the size attribute"""
         if type(size) is int:
             if size < 0 :
