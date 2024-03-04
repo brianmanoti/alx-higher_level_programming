@@ -10,11 +10,8 @@ class square:
 
     def __init__(self, size=0):
         """Initialises the size attribute"""
-        try:
-            if type(size) is int:
-                if size < 0 :
-                    raise ValueError("size must >= 0")
-                else:
-                self.__size = size
-        else:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
